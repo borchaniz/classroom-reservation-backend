@@ -14,6 +14,11 @@ public class Book {
 
     private String title;
 
+    private float price;
+
+    @Column(length = 65535, columnDefinition = "Text")
+    private String synopsis;
+
     private Date issuedOn;
 
     @OneToOne
@@ -21,7 +26,7 @@ public class Book {
     private Genre genre;
 
     @OneToMany
-    @JoinColumn(name="book_id")
+    @JoinColumn(name = "book_id")
     private List<Discount> discounts;
 
     public int getId() {
@@ -64,5 +69,20 @@ public class Book {
         this.discounts = discounts;
     }
 
+    public String getSynopsis() {
+        return synopsis;
+    }
+
+    public void setSynopsis(String synopsis) {
+        this.synopsis = synopsis;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
 
 }
