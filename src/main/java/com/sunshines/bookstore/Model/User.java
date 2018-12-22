@@ -1,6 +1,9 @@
 package com.sunshines.bookstore.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.List;
 
 @Entity
@@ -12,13 +15,22 @@ public class User {
 
     private String email;
 
-    private String Password;
+    @NotBlank
+    private String password;
+
+    @Transient
+    private String cPassword;
 
     private String name;
 
+    @Column(name = "family_name")
+    private String familyName;
+
     private int phone;
 
-    private String privilege;
+    @ManyToOne
+    @JoinColumn(name = "role_id")
+    private Role role;
 
     @OneToMany
     @JoinColumn(name = "user_id")
@@ -45,11 +57,19 @@ public class User {
     }
 
     public String getPassword() {
-        return Password;
+        return password;
     }
 
     public void setPassword(String password) {
-        Password = password;
+        this.password = password;
+    }
+
+    public String getcPassword() {
+        return cPassword;
+    }
+
+    public void setcPassword(String cPassword) {
+        this.cPassword = cPassword;
     }
 
     public String getName() {
@@ -60,20 +80,21 @@ public class User {
         this.name = name;
     }
 
+    public String getFamilyName() {
+        return familyName;
+    }
+
+    public void setFamilyName(String familyName) {
+        this.familyName = familyName;
+    }
+
+
     public int getPhone() {
         return phone;
     }
 
     public void setPhone(int phone) {
         this.phone = phone;
-    }
-
-    public String getPrivilege() {
-        return privilege;
-    }
-
-    public void setPrivilege(String privilege) {
-        this.privilege = privilege;
     }
 
     public List<CartElement> getCart() {
@@ -90,5 +111,18 @@ public class User {
 
     public void setOperationsHistory(List<Operation> operationsHistory) {
         this.operationsHistory = operationsHistory;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    public boolean isValid() {
+        if (!this.password.equals(this.cPassword) || this.name.equals("") || this.familyName.equals("")) return false;
+        return true;
     }
 }
