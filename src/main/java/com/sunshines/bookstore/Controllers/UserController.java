@@ -26,6 +26,8 @@ public class UserController {
     @Autowired
     public PasswordEncoder passwordEncoder;
 
+
+
     @PostConstruct
     private void seedRoles() {
         System.out.print("constructed");

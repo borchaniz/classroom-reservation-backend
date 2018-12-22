@@ -5,6 +5,7 @@ import com.sunshines.bookstore.Model.Genre;
 import com.sunshines.bookstore.Repository.BookRepository;
 import com.sunshines.bookstore.Repository.GenreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,6 +21,7 @@ public class BookController {
     public GenreRepository genreRepository;
 
     @GetMapping("/")
+    @PreAuthorize("hasRole('SHOPPER')")
     public List<Book> getAllBooks() {
         return bookRepository.findAll();
     }
