@@ -29,6 +29,9 @@ public class Book {
     @JoinColumn(name = "book_id")
     private List<Discount> discounts;
 
+    @Transient
+    private Discount activeDiscount;
+
     public int getId() {
         return id;
     }
