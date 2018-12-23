@@ -1,5 +1,7 @@
 package com.sunshines.bookstore.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -42,6 +44,7 @@ public class CartElement {
         this.book = book;
     }
 
+    @JsonIgnore
     public User getUser() {
         return user;
     }

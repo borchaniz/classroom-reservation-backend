@@ -36,4 +36,10 @@ public class BookController {
     public List<Genre> getAllGenres() {
         return genreRepository.findAll();
     }
+
+
+    @GetMapping("/{id}")
+    public Book getBookById(@PathVariable int id) {
+        return bookRepository.findFirstById(id);
+    }
 }

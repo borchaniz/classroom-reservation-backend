@@ -1,8 +1,12 @@
 package com.sunshines.bookstore.Controllers;
 
 import com.sunshines.bookstore.Exception.InvalidRequestException;
+import com.sunshines.bookstore.Model.CartElement;
+import com.sunshines.bookstore.Model.Request.AddToCartRequest;
 import com.sunshines.bookstore.Model.Role;
 import com.sunshines.bookstore.Model.User;
+import com.sunshines.bookstore.Repository.BookRepository;
+import com.sunshines.bookstore.Repository.CartRepository;
 import com.sunshines.bookstore.Repository.RoleRepository;
 import com.sunshines.bookstore.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +32,11 @@ public class UserController {
     @Autowired
     public PasswordEncoder passwordEncoder;
 
+    @Autowired
+    public BookRepository bookRepository;
 
+    @Autowired
+    public CartRepository cartRepository;
 
     @PostConstruct
     private void seedRoles() {
@@ -77,8 +85,17 @@ public class UserController {
     }
 
     @GetMapping("/authenticated")
-    @ResponseStatus(HttpStatus.OK)
     public User authenticated(){
         return userRepository.findFirstByEmail(SecurityContextHolder.getContext().getAuthentication().getPrincipal().toString());
+    }
+
+    @PostMapping("/addToCart")
+    public void addTocart(@RequestBody @Valid AddToCartRequest request){
+        CartElement element = new CartElement();
+        element.setBook(bookRepository.findFirstById(request.getBookId()));
+        element.setQuantity(request.getQuantity());
+        element.setUser(authenticated());
+        cartRepository.save(element);
+
     }
 }
