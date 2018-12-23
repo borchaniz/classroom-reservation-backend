@@ -1,6 +1,7 @@
 package com.sunshines.bookstore.Controllers;
 
 import com.sunshines.bookstore.Exception.InvalidRequestException;
+import com.sunshines.bookstore.Model.Book;
 import com.sunshines.bookstore.Model.CartElement;
 import com.sunshines.bookstore.Model.Request.AddToCartRequest;
 import com.sunshines.bookstore.Model.Role;
@@ -11,7 +12,7 @@ import com.sunshines.bookstore.Repository.RoleRepository;
 import com.sunshines.bookstore.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.security.core.Authentication;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
@@ -41,7 +42,7 @@ public class UserController {
     @PostConstruct
     private void seedRoles() {
         System.out.print("constructed");
-        if (roleRepository.findAll().size() == 0){
+        if (roleRepository.findAll().size() == 0) {
             Role admin = new Role();
             admin.setName("ADMIN");
             roleRepository.save(admin);
@@ -51,7 +52,7 @@ public class UserController {
             roleRepository.save(shopper);
         }
 
-        if (userRepository.findAll().size() == 0){
+        if (userRepository.findAll().size() == 0) {
             User admin = new User();
             Role adminRole = roleRepository.findFirstByName("ADMIN");
             if (admin == null) {
@@ -71,11 +72,11 @@ public class UserController {
 
     @PostMapping("/register")
     @ResponseStatus(HttpStatus.OK)
-    public User register(@Valid @RequestBody User user){
-        if (!user.isValid()){
+    public User register(@Valid @RequestBody User user) {
+        if (!user.isValid()) {
             throw new InvalidRequestException("Invalid User Request");
         }
-        if (userRepository.findAllByEmail(user.getEmail()).size()!=0)
+        if (userRepository.findAllByEmail(user.getEmail()).size() != 0)
             throw new InvalidRequestException("Email already exists");
 
         user.setRole(roleRepository.findFirstByName("SHOPPER"));
@@ -85,17 +86,39 @@ public class UserController {
     }
 
     @GetMapping("/authenticated")
-    public User authenticated(){
-        return userRepository.findFirstByEmail(SecurityContextHolder.getContext().getAuthentication().getPrincipal().toString());
+    public User authenticated() {
+        User user = userRepository.findFirstByEmail(SecurityContextHolder.getContext().getAuthentication().getPrincipal().toString());
+        user.calculateTotalCart();
+        return user;
     }
 
     @PostMapping("/addToCart")
-    public void addTocart(@RequestBody @Valid AddToCartRequest request){
-        CartElement element = new CartElement();
-        element.setBook(bookRepository.findFirstById(request.getBookId()));
-        element.setQuantity(request.getQuantity());
-        element.setUser(authenticated());
+    @PreAuthorize("hasRole('SHOPPER')")
+    public void addTocart(@RequestBody @Valid AddToCartRequest request) {
+        CartElement element;
+        User user = authenticated();
+        Book book = bookRepository.findFirstById(request.getBookId());
+        if (book==null){
+            throw new InvalidRequestException("Book Not found");
+        }
+        element = cartRepository.findFirstByBookAndUser(book, user);
+        if (element == null) {
+            element = new CartElement();
+            element.setQuantity(0);
+        }
+        element.setBook(book);
+        element.setQuantity(element.getQuantity() + request.getQuantity());
+        element.setUser(user);
         cartRepository.save(element);
+    }
 
+    @DeleteMapping("/clearCart")
+    @PreAuthorize("hasRole('SHOPPER')")
+    public User clearCart() {
+        User user = this.authenticated();
+        for (CartElement item : user.getCart()) {
+            this.cartRepository.delete(item);
+        }
+        return authenticated();
     }
 }

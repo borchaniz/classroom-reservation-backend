@@ -14,6 +14,7 @@ import java.util.List;
 @Entity
 @Table(name = "users")
 public class User implements UserDetails {
+
     @Id
     @GeneratedValue
     private int id;
@@ -32,6 +33,9 @@ public class User implements UserDetails {
     private String familyName;
 
     private int phone;
+
+    @Transient
+    private float totalCart;
 
     @ManyToOne
     @JoinColumn(name = "role_id")
@@ -161,6 +165,21 @@ public class User implements UserDetails {
     public boolean isValid() {
         if (!this.password.equals(this.cPassword) || this.name.equals("") || this.familyName.equals("")) return false;
         return true;
+    }
+
+    public float getTotalCart() {
+        return totalCart;
+    }
+
+    public void setTotalCart(float totalCart) {
+        this.totalCart = totalCart;
+    }
+
+    public void calculateTotalCart(){
+        totalCart = 0;
+        for(CartElement element : cart){
+            totalCart+=element.getQuantity()*element.getBook().getPrice();
+        }
     }
 
 
