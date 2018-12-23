@@ -1,4 +1,4 @@
-package com.sunshines.bookstore.Config;
+package com.sunshines.bookstore.Config.Filter;
 
 import io.jsonwebtoken.Jwts;
 import org.springframework.security.authentication.AuthenticationManager;

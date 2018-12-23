@@ -1,4 +1,4 @@
-package com.sunshines.bookstore.Config;
+package com.sunshines.bookstore.Config.Filter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sunshines.bookstore.Model.User;

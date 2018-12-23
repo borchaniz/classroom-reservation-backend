@@ -1,4 +1,4 @@
-package com.sunshines.bookstore.Config;
+package com.sunshines.bookstore.Service;
 
 import com.sunshines.bookstore.Model.User;
 import com.sunshines.bookstore.Repository.UserRepository;
