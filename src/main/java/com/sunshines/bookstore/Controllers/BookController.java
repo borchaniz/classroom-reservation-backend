@@ -21,7 +21,7 @@ public class BookController {
     public GenreRepository genreRepository;
 
     @GetMapping("/")
-    @PreAuthorize("hasRole('SHOPPER')")
+//    @PreAuthorize("hasRole('SHOPPER')")
     public List<Book> getAllBooks() {
         return bookRepository.findAll();
     }
