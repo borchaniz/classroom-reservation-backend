@@ -1,5 +1,7 @@
 package com.sunshines.bookstore.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Date;
@@ -55,6 +57,7 @@ public class Discount {
         this.endDate = endDate;
     }
 
+    @JsonIgnore
     public Book getBook() {
         return book;
     }

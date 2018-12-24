@@ -2,7 +2,7 @@ package com.sunshines.bookstore.Model;
 
 
 import javax.persistence.*;
-import java.util.Date;
+import java.sql.Timestamp;
 import java.util.List;
 
 @Entity
@@ -19,8 +19,6 @@ public class Book {
     @Column(length = 65535, columnDefinition = "Text")
     private String synopsis;
 
-    private Date issuedOn;
-
     @OneToOne
     @JoinColumn(name = "genre_id", nullable = false)
     private Genre genre;
@@ -31,6 +29,10 @@ public class Book {
 
     @Transient
     private Discount activeDiscount;
+
+    @ManyToOne
+    @JoinColumn(name = "author_id")
+    private Author author;
 
     public int getId() {
         return id;
@@ -46,14 +48,6 @@ public class Book {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public Date getIssuedOn() {
-        return issuedOn;
-    }
-
-    public void setIssuedOn(Date issuedOn) {
-        this.issuedOn = issuedOn;
     }
 
     public Genre getGenre() {
@@ -86,6 +80,32 @@ public class Book {
 
     public void setPrice(float price) {
         this.price = price;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
+
+    public Discount getActiveDiscount() {
+        return activeDiscount;
+    }
+
+    public void setActiveDiscount(Discount activeDiscount) {
+        this.activeDiscount = activeDiscount;
+    }
+
+    public void setBestDiscount() {
+        Timestamp now = new Timestamp(System.currentTimeMillis());
+        activeDiscount = null;
+        for (Discount d : discounts) {
+            if (now.compareTo(d.getStartDate()) > 0 && now.compareTo(d.getEndDate()) < 0 && (activeDiscount == null || activeDiscount.getPercentage() < d.getPercentage())) {
+                activeDiscount = d;
+            }
+        }
     }
 
 }

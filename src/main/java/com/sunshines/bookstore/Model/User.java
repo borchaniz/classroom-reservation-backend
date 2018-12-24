@@ -176,9 +176,12 @@ public class User implements UserDetails {
     }
 
     public void calculateTotalCart(){
+        for (CartElement c:cart){
+            c.getBook().setBestDiscount();
+        }
         totalCart = 0;
         for(CartElement element : cart){
-            totalCart+=element.getQuantity()*element.getBook().getPrice();
+            totalCart+=element.getQuantity()*element.getBook().getPrice()*(element.getBook().getActiveDiscount()==null?1:element.getBook().getActiveDiscount().getPercentage()/100);
         }
     }
 

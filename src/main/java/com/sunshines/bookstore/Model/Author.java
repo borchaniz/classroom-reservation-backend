@@ -15,8 +15,6 @@ public class Author {
 
     private String name;
 
-    private int born;
-
     public int getId() {
         return id;
     }
@@ -33,11 +31,4 @@ public class Author {
         this.name = name;
     }
 
-    public int getBorn() {
-        return born;
-    }
-
-    public void setBorn(int born) {
-        this.born = born;
-    }
 }

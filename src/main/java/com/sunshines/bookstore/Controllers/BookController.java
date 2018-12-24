@@ -23,13 +23,21 @@ public class BookController {
     @GetMapping("/")
 //    @PreAuthorize("hasRole('SHOPPER')")
     public List<Book> getAllBooks() {
-        return bookRepository.findAll();
+        List<Book> books = bookRepository.findAll();
+        if(books!=null)
+            for (Book book : books)
+                book.setBestDiscount();
+        return books;
     }
 
     @GetMapping("/genre/{id}")
     public List<Book> getBooksByGenre(@PathVariable int id) {
         Genre genre = genreRepository.findById(id);
-        return bookRepository.findByGenre(genre);
+        List<Book> books = bookRepository.findByGenre(genre);
+        if(books!=null)
+            for (Book book : books)
+                book.setBestDiscount();
+        return books;
     }
 
     @GetMapping("/genre")
@@ -40,6 +48,8 @@ public class BookController {
 
     @GetMapping("/{id}")
     public Book getBookById(@PathVariable int id) {
-        return bookRepository.findFirstById(id);
+        Book book = bookRepository.findFirstById(id);
+        book.setBestDiscount();
+        return book;
     }
 }
