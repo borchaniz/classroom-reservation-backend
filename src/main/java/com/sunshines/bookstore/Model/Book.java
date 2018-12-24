@@ -16,6 +16,8 @@ public class Book {
 
     private float price;
 
+    private String image;
+
     @Column(length = 65535, columnDefinition = "Text")
     private String synopsis;
 
@@ -92,6 +94,14 @@ public class Book {
 
     public Discount getActiveDiscount() {
         return activeDiscount;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public void setActiveDiscount(Discount activeDiscount) {
