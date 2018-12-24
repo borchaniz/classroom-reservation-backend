@@ -1,6 +1,7 @@
 package com.sunshines.bookstore.Controllers;
 
 import com.sunshines.bookstore.Model.Book;
+import com.sunshines.bookstore.Model.Discount;
 import com.sunshines.bookstore.Model.Genre;
 import com.sunshines.bookstore.Repository.BookRepository;
 import com.sunshines.bookstore.Repository.GenreRepository;
@@ -62,6 +63,13 @@ public class BookController {
     public Book getBookById(@PathVariable int id) {
         Book book = bookRepository.findFirstById(id);
         book.setBestDiscount();
+        return book;
+    }
+
+    @PostMapping("/discount/{id}")
+    public Book addDiscount(@RequestBody @Valid Discount discount, @PathVariable("id") int id) {
+        Book book = this.bookRepository.findFirstById(id);
+        discount.setBook(book);
         return book;
     }
 }
