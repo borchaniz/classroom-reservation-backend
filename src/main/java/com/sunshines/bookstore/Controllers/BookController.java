@@ -5,7 +5,6 @@ import com.sunshines.bookstore.Model.Genre;
 import com.sunshines.bookstore.Repository.BookRepository;
 import com.sunshines.bookstore.Repository.GenreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -25,17 +24,23 @@ public class BookController {
 //    @PreAuthorize("hasRole('SHOPPER')")
     public List<Book> getAllBooks() {
         List<Book> books = bookRepository.findAll();
-        if(books!=null)
+        if (books != null)
             for (Book book : books)
                 book.setBestDiscount();
         return books;
+    }
+
+    @PostMapping("/")
+    public Book addBook(@RequestBody @Valid Book book) {
+        this.bookRepository.save(book);
+        return book;
     }
 
     @GetMapping("/genre/{id}")
     public List<Book> getBooksByGenre(@PathVariable int id) {
         Genre genre = genreRepository.findById(id);
         List<Book> books = bookRepository.findByGenre(genre);
-        if(books!=null)
+        if (books != null)
             for (Book book : books)
                 book.setBestDiscount();
         return books;
