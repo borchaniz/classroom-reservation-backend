@@ -91,6 +91,11 @@ public class UserController {
         user.calculateTotalCart();
         return user;
     }
+    @GetMapping("/authenticatedAdmin")
+    public User authenticatedAdmin() {
+        User user = userRepository.findFirstByEmail(SecurityContextHolder.getContext().getAuthentication().getPrincipal().toString());
+        return user;
+    }
 
     @PostMapping("/addToCart")
     @PreAuthorize("hasRole('SHOPPER')")
