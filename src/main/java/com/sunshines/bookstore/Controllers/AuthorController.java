@@ -8,6 +8,7 @@ import com.sunshines.bookstore.Repository.AuthorRepository;
 import com.sunshines.bookstore.Repository.BookRepository;
 import com.sunshines.bookstore.Repository.GenreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -26,6 +27,7 @@ public class AuthorController {
     }
 
     @PostMapping
+    @PreAuthorize("hasRole('ADMIN')")
     public List<Author> addAuthor(@RequestBody @Valid Author author){
         this.authorRepository.save(author);
         return this.getAllAuthors();

@@ -1,5 +1,6 @@
 package com.sunshines.bookstore.Controllers;
 
+import com.sunshines.bookstore.Security.JWTTokenProvider;
 import com.sunshines.bookstore.Exception.InvalidRequestException;
 import com.sunshines.bookstore.Model.Book;
 import com.sunshines.bookstore.Model.CartElement;
@@ -13,11 +14,15 @@ import com.sunshines.bookstore.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 @RestController
@@ -38,6 +43,12 @@ public class UserController {
 
     @Autowired
     public CartRepository cartRepository;
+
+    @Autowired
+    public AuthenticationManager authenticationManager;
+
+    @Autowired
+    public JWTTokenProvider tokenProvider;
 
     @PostConstruct
     private void seedRoles() {
@@ -85,18 +96,39 @@ public class UserController {
         return user;
     }
 
+    @PostMapping("/signin")
+    public void authenticateUser(@Valid @RequestBody User user, HttpServletResponse response) {
+
+        Authentication authentication = authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(
+                        user.getEmail(),
+                        user.getPassword()
+                )
+        );
+
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+        String jwt = tokenProvider.generateToken(authentication);
+        response.addHeader("Authorization", "Bearer "+jwt);
+        return;
+    }
+
+
+    @PreAuthorize("hasRole('SHOPPER')")
     @GetMapping("/authenticated")
     public User authenticated() {
-        User user = userRepository.findFirstByEmail(SecurityContextHolder.getContext().getAuthentication().getPrincipal().toString());
+        User user = userRepository.findFirstByEmail(((User) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getEmail());
         user.calculateTotalCart();
         return user;
     }
+
+    @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping("/authenticatedAdmin")
-    public User authenticatedAdmin() {
-        User user = userRepository.findFirstByEmail(SecurityContextHolder.getContext().getAuthentication().getPrincipal().toString());
+    public Object authenticatedAdmin() {
+        User user = userRepository.findFirstByEmail(((User) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getEmail());
         return user;
     }
 
+    
     @PostMapping("/addToCart")
     @PreAuthorize("hasRole('SHOPPER')")
     public void addTocart(@RequestBody @Valid AddToCartRequest request) {

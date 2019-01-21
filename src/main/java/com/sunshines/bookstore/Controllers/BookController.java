@@ -6,6 +6,7 @@ import com.sunshines.bookstore.Model.Genre;
 import com.sunshines.bookstore.Repository.BookRepository;
 import com.sunshines.bookstore.Repository.GenreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -22,7 +23,6 @@ public class BookController {
     public GenreRepository genreRepository;
 
     @GetMapping("/")
-//    @PreAuthorize("hasRole('SHOPPER')")
     public List<Book> getAllBooks() {
         List<Book> books = bookRepository.findAll();
         if (books != null)
@@ -32,6 +32,7 @@ public class BookController {
     }
 
     @PostMapping("/")
+    @PreAuthorize("hasRole('ADMIN')")
     public Book addBook(@RequestBody @Valid Book book) {
         this.bookRepository.save(book);
         return book;
@@ -52,6 +53,7 @@ public class BookController {
         return genreRepository.findAll();
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/genre")
     public List<Genre> addGenre(@RequestBody @Valid Genre genre) {
         genreRepository.save(genre);
@@ -67,6 +69,7 @@ public class BookController {
     }
 
     @PostMapping("/discount/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
     public Book addDiscount(@RequestBody @Valid Discount discount, @PathVariable("id") int id) {
         Book book = this.bookRepository.findFirstById(id);
         discount.setBook(book);
