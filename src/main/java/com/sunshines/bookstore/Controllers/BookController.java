@@ -32,7 +32,7 @@ public class BookController {
     }
 
     @PostMapping("/")
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public Book addBook(@RequestBody @Valid Book book) {
         this.bookRepository.save(book);
         return book;
@@ -53,7 +53,7 @@ public class BookController {
         return genreRepository.findAll();
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAuthority('ADMIN')")
     @PostMapping("/genre")
     public List<Genre> addGenre(@RequestBody @Valid Genre genre) {
         genreRepository.save(genre);
@@ -69,7 +69,7 @@ public class BookController {
     }
 
     @PostMapping("/discount/{id}")
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public Book addDiscount(@RequestBody @Valid Discount discount, @PathVariable("id") int id) {
         Book book = this.bookRepository.findFirstById(id);
         discount.setBook(book);

@@ -27,7 +27,7 @@ public class AuthorController {
     }
 
     @PostMapping
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public List<Author> addAuthor(@RequestBody @Valid Author author){
         this.authorRepository.save(author);
         return this.getAllAuthors();

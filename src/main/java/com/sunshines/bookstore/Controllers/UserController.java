@@ -113,7 +113,7 @@ public class UserController {
     }
 
 
-    @PreAuthorize("hasRole('SHOPPER')")
+    @PreAuthorize("hasAuthority('SHOPPER')")
     @GetMapping("/authenticated")
     public User authenticated() {
         User user = userRepository.findFirstByEmail(((User) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getEmail());
@@ -128,9 +128,9 @@ public class UserController {
         return user;
     }
 
-    
+
     @PostMapping("/addToCart")
-    @PreAuthorize("hasRole('SHOPPER')")
+    @PreAuthorize("hasAuthority('SHOPPER')")
     public void addTocart(@RequestBody @Valid AddToCartRequest request) {
         CartElement element;
         User user = authenticated();
@@ -150,7 +150,7 @@ public class UserController {
     }
 
     @DeleteMapping("/clearCart")
-    @PreAuthorize("hasRole('SHOPPER')")
+    @PreAuthorize("hasAuthority('SHOPPER')")
     public User clearCart() {
         User user = this.authenticated();
         for (CartElement item : user.getCart()) {
