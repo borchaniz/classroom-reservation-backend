@@ -1,4 +1,4 @@
-package com.sunshines.bookstore.Exception;
+package com.sunshines.classrooms.Exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
