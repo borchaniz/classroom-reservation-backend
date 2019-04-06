@@ -8,6 +8,7 @@ import com.sunshines.classrooms.Repository.UserRepository
 import com.sunshines.classrooms.Security.JWTTokenProvider
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
+import org.springframework.http.ResponseEntity
 import org.springframework.security.access.prepost.PreAuthorize
 import org.springframework.security.authentication.AuthenticationManager
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
@@ -45,8 +46,16 @@ class   UserController {
             admin.name = "ADMIN"
             roleRepository.save(admin)
 
+            val student = Role()
+            student.name = "STUDENT"
+            roleRepository.save(student)
+
+            val teacher = Role()
+            teacher.name = "TEACHER"
+            roleRepository.save(teacher)
+
             val user = Role()
-            user.name = "user"
+            user.name = "USER"
             roleRepository.save(user)
         }
 
@@ -59,34 +68,48 @@ class   UserController {
                 roleRepository.save(adminRole)
             }
             admin.role = adminRole
-            admin.name = "administrator"
-            admin.familyName = "bookstore"
+            admin.first_name = "admin"
+            admin.last_name = "admin"
+            admin.cin = "00700707"
             admin.email = "administrator@classrooms.com"
-            admin.setPassword(passwordEncoder!!.encode("159753wtf"))
-            admin.phone = 52525252
+            admin.setPassword(passwordEncoder.encode("12345678"))
+            admin.phone = "51515151"
             userRepository.save(admin)
         }
     }
 
-    @PostMapping("/register")
+    @PostMapping("/registerStudent")
     @ResponseStatus(HttpStatus.OK)
-    fun register(@Valid @RequestBody user: User): User {
+    fun registerStudent(@Valid @RequestBody user: User): User {
         if (!user.isValid) {
             throw InvalidRequestException("Invalid User Request")
         }
         if (userRepository.findAllByEmail(user.email!!).isNotEmpty())
             throw InvalidRequestException("Email already exists")
-
-        user.role = roleRepository!!.findFirstByName("USER")
+        user.role = roleRepository.findFirstByName("STUDENT")
         //        user.setPassword(passwordEncoder.encode(user.getPassword()));
-        userRepository!!.save(user)
+        userRepository.save(user)
+        return user
+    }
+
+    @PostMapping("/registerTeacher")
+    @ResponseStatus(HttpStatus.OK)
+    fun registerTeacher(@Valid @RequestBody user: User): User {
+        if (!user.isValid) {
+            throw InvalidRequestException("Invalid User Request")
+        }
+        if (userRepository.findAllByEmail(user.email!!).isNotEmpty())
+            throw InvalidRequestException("Email already exists")
+        user.role = roleRepository.findFirstByName("TEACHER")
+        //        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        userRepository.save(user)
         return user
     }
 
     @PostMapping("/signin")
-    fun authenticateUser(@Valid @RequestBody user: User, response: HttpServletResponse) {
+    fun authenticateUser(@RequestBody user: User, response: HttpServletResponse) {
 
-        val authentication = authenticationManager!!.authenticate(
+        val authentication = authenticationManager.authenticate(
                 UsernamePasswordAuthenticationToken(
                         user.email,
                         user.password
@@ -97,6 +120,41 @@ class   UserController {
         val jwt = tokenProvider.generateToken(authentication)
         response.addHeader("Authorization", "Bearer $jwt")
         return
+    }
+    @PutMapping("/validateUser/{id}")
+    fun validateUser(@PathVariable(value = "id") user_id: Int): ResponseEntity<User> {
+
+        return userRepository.findById(user_id).map { existingUser ->
+            val validatedUser: User = existingUser
+                    .copy(status = 1)
+            ResponseEntity.ok().body(userRepository.save(validatedUser))
+        }.orElse(ResponseEntity.notFound().build())
+    }
+
+    @PutMapping("/unValidateUser/{id}")
+    fun unValidateUser(@PathVariable(value = "id") user_id: Int): ResponseEntity<User> {
+
+        return userRepository.findById(user_id).map { existingUser ->
+            val unValidatedUser: User = existingUser
+                    .copy(status = 2)
+            ResponseEntity.ok().body(userRepository.save(unValidatedUser))
+        }.orElse(ResponseEntity.notFound().build())
+    }
+
+    @GetMapping("")
+//    @PreAuthorize("hasAuthority('ADMIN')")
+    fun getAllUsers() : ResponseEntity<List<User> >{
+        return ResponseEntity.ok().body(userRepository.findAll().filter{ user -> user.role!!.name!="ADMIN"})
+    }
+
+    @GetMapping("/allStudents")
+    fun getAllStudents() : ResponseEntity<List<User> >{
+        return ResponseEntity.ok().body(userRepository.findAll().filter{ user -> user.role!!.name=="STUDENT"})
+    }
+
+    @GetMapping("/allTeachers")
+    fun getAllTeachers() : ResponseEntity<List<User> >{
+        return ResponseEntity.ok().body(userRepository.findAll().filter{ user -> user.role!!.name=="TEACHER"})
     }
 
 

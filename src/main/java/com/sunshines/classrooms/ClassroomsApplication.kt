@@ -20,6 +20,7 @@ class ClassroomsApplication : CommandLineRunner {
 
     companion object {
 
+
         @JvmStatic
         fun main(args: Array<String>) {
             SpringApplication.run(ClassroomsApplication::class.java, *args)

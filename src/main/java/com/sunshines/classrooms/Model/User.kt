@@ -9,34 +9,46 @@ import javax.validation.constraints.NotBlank
 
 
 @Entity
-@Table(name = "users")
-class User : UserDetails {
+@Table(name = "USERS")
+data class User (
 
-    @Id
-    @GeneratedValue
-    var id: Int = 0
+        @Id
+        @GeneratedValue
+        var id: Int = 0,
+        @Column(name = "email")
+        var email: String? = "",
 
-    var email: String? = null
+        @NotBlank
+        private var password: String? = null,
 
-    @NotBlank
-    private var password: String? = null
+        @Transient
+        private var cPassword: String? = null,
 
-    @Transient
-    private var cPassword: String? = null
+        @Column(name = "first_name")
+        var first_name: String? = "",
 
-    var name: String? = null
+        @Column(name = "last_name")
+        var last_name: String? = "",
 
-    @Column(name = "family_name")
-    var familyName: String? = null
+        @Column(name = "phone")
+        var phone: String? = "",
 
-    var phone: Int = 0
+        @Column(name = "cin")
+        var cin: String? = "",
 
-    @ManyToOne
-    @JoinColumn(name = "role_id")
-    var role: Role? = null
+        @Column(name = "num_ins")
+        var num_ins: String? = null,
 
+        @Column(name = "status")
+        var status: Int? = 0,
+
+        @ManyToOne
+        @JoinColumn(name = "role_id")
+        var role: Role? = null
+):UserDetails {
     val isValid: Boolean
-        get() = !(this.password != this.cPassword || this.name == "" || this.familyName == "")
+        get() = !(this.password != this.cPassword || this.first_name == "" || this.last_name
+                == "" || this.phone == "" || this.cin == "")
 
     override fun getAuthorities(): Collection<GrantedAuthority> {
         val authorities = ArrayList<GrantedAuthority>()

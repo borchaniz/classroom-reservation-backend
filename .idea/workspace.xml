@@ -1,10 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9d5fcef-66e4-4b20-bf27-50bb6e8d819f" name="Default Changelist" comment="" />
+    <list default="true" id="d9d5fcef-66e4-4b20-bf27-50bb6e8d819f" name="Default Changelist" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Controllers/OrganismeController.kt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Controllers/ReservationController.kt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Controllers/SalleController.kt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Controllers/TypeOrganismeController.kt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Controllers/TypeSalleController.kt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Model/Organisme.kt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Model/Reservation.kt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Model/Salle.kt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Model/Type_Organisme.kt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Repository/OrganismeRepository.kt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Repository/ReservationRepository.kt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Repository/SalleRepository.kt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Repository/TypeOrganismeRepository.kt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Repository/TypeSalleRepository.kt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/configurations/hibernate-mysql.cfg.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_4_Final.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_3_7_Final.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_23_1_GA.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/bookstore.iml" afterPath="$PROJECT_DIR$/bookstore.iml" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/ClassroomsApplication.kt" afterPath="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/ClassroomsApplication.kt" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Controllers/UserController.kt" afterPath="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Controllers/UserController.kt" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Model/Role.kt" afterPath="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Model/Role.kt" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Model/User.kt" afterPath="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Model/User.kt" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/classrooms.kotlin_module" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/ClassroomsApplication$Companion.class" afterPath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/ClassroomsApplication$Companion.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/ClassroomsApplication.class" afterPath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/ClassroomsApplication.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/Controllers/UserController.class" afterPath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/Controllers/UserController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/Model/Role.class" afterPath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/Model/Role.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/Model/User.class" afterPath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/Model/User.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/Repository/RoleRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/Repository/RoleRepository.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/Repository/UserRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/Repository/UserRepository.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/Security/CorsConfig.class" afterPath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/Security/CorsConfig.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/Security/JWTAuthenticationFilter.class" afterPath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/Security/JWTAuthenticationFilter.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/Security/JWTTokenProvider.class" afterPath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/Security/JWTTokenProvider.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/Security/JwtAuthenticationEntryPoint.class" afterPath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/Security/JwtAuthenticationEntryPoint.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/Security/SecurityConfig.class" afterPath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/Security/SecurityConfig.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/Security/SwaggerConfig.class" afterPath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/Security/SwaggerConfig.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/Service/StorageService.class" afterPath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/Service/StorageService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/Service/UserDetailsSvc.class" afterPath="$PROJECT_DIR$/target/classes/com/sunshines/classrooms/Service/UserDetailsSvc.class" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,98 +64,104 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserController.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Controllers/UserController.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+            <state relative-caret-position="171">
+              <caret line="144" column="0" lean-forward="false" selection-start-line="144" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Model/Role.kt">
+      <file leaf-file-name="Valid.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final-sources.jar!/javax/validation/Valid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="399">
+              <caret line="33" column="18" lean-forward="false" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="User.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Model/User.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+            <state relative-caret-position="129">
+              <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Repository/RoleRepository.kt">
+      <file leaf-file-name="OrganismeController.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Controllers/OrganismeController.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+            <state relative-caret-position="21">
+              <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Reservation.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Model/Reservation.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="40" column="14" lean-forward="true" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
               <folding>
-                <element signature="e#45#198#0" expanded="true" />
+                <element signature="e#40#85#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Repository/UserRepository.kt">
+      <file leaf-file-name="ReservationController.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Controllers/ReservationController.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-              <folding>
-                <element signature="e#45#197#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="41" column="43" lean-forward="false" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="43" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Service/UserDetailsSvc.kt">
+      <file leaf-file-name="ClassroomsApplication.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/ClassroomsApplication.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+            <state relative-caret-position="370">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Security/SecurityConfig.kt">
+      <file leaf-file-name="ReservationRepository.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Repository/ReservationRepository.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+            <state relative-caret-position="105">
+              <caret line="8" column="59" lean-forward="false" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Security/CorsConfig.kt">
+      <file leaf-file-name="SalleController.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Controllers/SalleController.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+            <state relative-caret-position="1029">
+              <caret line="68" column="5" lean-forward="true" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="DefaultListableBeanFactory.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.3.RELEASE/spring-beans-5.1.3.RELEASE.jar!/org/springframework/beans/factory/support/DefaultListableBeanFactory.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1326">
-              <caret line="78" column="38" selection-start-line="78" selection-start-column="38" selection-end-line="78" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Security/JWTAuthenticationFilter.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="29" column="79" selection-start-line="29" selection-start-column="79" selection-end-line="29" selection-end-column="79" />
+            <state relative-caret-position="193">
+              <caret line="962" column="25" lean-forward="false" selection-start-line="962" selection-start-column="25" selection-end-line="962" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -122,6 +173,7 @@
       <list>
         <option value="Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -130,18 +182,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>c</find>
-      <find>signWith</find>
-      <find>jjwt</find>
-      <find>false</find>
-      <find>doFilter</find>
-      <find>cart</find>
-      <find>jsonIg</find>
-      <find>json</find>
-      <find>act</find>
-      <find>issuer</find>
-      <find>you</find>
-      <find>pre</find>
       <find>author</find>
       <find>userDe</find>
       <find>getAuthentication</find>
@@ -160,10 +200,31 @@
       <find>kotlin</find>
       <find>kotlin-s</find>
       <find>passwor</find>
+      <find>hibern</find>
+      <find>typeOrganismeRepository</find>
+      <find>typeSalleRepository</find>
+      <find>salle</find>
+      <find>TYpe</find>
+      <find>type_organisation</find>
+      <find>type</find>
+      <find>Type</find>
+      <find>Organisme</find>
+      <find>.type</find>
+      <find>signin</find>
+      <find>has</find>
     </findStrings>
     <replaceStrings>
       <replace>true</replace>
       <replace>hasAuthority</replace>
+      <replace>typeOrganismeRepository</replace>
+      <replace>type_organisation_id</replace>
+      <replace>type_organisme</replace>
+      <replace>organisation_id</replace>
+      <replace>organisme</replace>
+      <replace>Organisme</replace>
+      <replace>salle</replace>
+      <replace>Salle</replace>
+      <replace>.type_salle</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\borch\Desktop\framework\bookstore-backend\src\main\java</dir>
@@ -177,34 +238,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Model/Request/AddToCartRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Model/CartElement.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Repository/CartRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Config/SwaggerConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Config/CorsConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Model/Discount.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Model/Author.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Repository/AuthorRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/BookstoreApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Service/StorageService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Model/Book.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Config/Filter/JWTAuthorizationFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Config/TokenProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Config/Filter/JWTAuthenticationFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Config/JwtAuthenticationEntryPoint.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Config/JWTTokenProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Config/SecurityConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Config/JWTAuthenticationFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Security/JWTAuthenticationFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Controllers/AuthorController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Security/SecurityConstants.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Controllers/BookController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Controllers/FileController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Security/SecurityConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Model/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Controllers/UserController.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Model/Role.kt" />
@@ -221,57 +266,98 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Security/JWTAuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Security/SecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/ClassroomsApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/ClassroomsApplication.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Security/CorsConfig.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Security/JWTAuthenticationFilter.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Security/SecurityConfig.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Service/UserDetailsSvc.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Repository/UserRepository.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Repository/RoleRepository.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Model/Role.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Model/Organisation.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Model/Type_sALLE.kt" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Controllers/UserController.kt" />
+        <option value="$PROJECT_DIR$/src/main/resources/configurations/hibernate-mysql.cfg.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/ClassroomsApplication.kt" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Repository/TypeSalleRepository.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Model/Type_Salle.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Controllers/TypeSalleController.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Model/Type_Organisme.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Repository/TypeOrganisationRepository.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Model/User.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Repository/OrganismeRepository.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Repository/TypeOrganismeRepository.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Controllers/TypeOrganismeController.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Model/Organisme.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Repository/SalleRepository.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Model/Salle.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Controllers/SalleController.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Repository/ReservationRepository.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Model/Reservation.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Controllers/OrganismeController.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Controllers/ReservationController.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Controllers/UserController.kt" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1386" />
-    <option name="height" value="788" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="952" />
+    <option name="width" value="976" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="classroom-reservation-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="classrooms" type="b2602c69:ProjectViewProjectNode" />
               <item name="classroom-reservation-backend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="classroom-reservation-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="classrooms" type="b2602c69:ProjectViewProjectNode" />
               <item name="classroom-reservation-backend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="classroom-reservation-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="classrooms" type="b2602c69:ProjectViewProjectNode" />
               <item name="classroom-reservation-backend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="classroom-reservation-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="classrooms" type="b2602c69:ProjectViewProjectNode" />
               <item name="classroom-reservation-backend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="classroom-reservation-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="classrooms" type="b2602c69:ProjectViewProjectNode" />
               <item name="classroom-reservation-backend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -279,7 +365,7 @@
               <item name="classrooms" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="classroom-reservation-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="classrooms" type="b2602c69:ProjectViewProjectNode" />
               <item name="classroom-reservation-backend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -288,16 +374,7 @@
               <item name="Controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="classroom-reservation-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="classroom-reservation-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="classrooms" type="462c0819:PsiDirectoryNode" />
-              <item name="Exception" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="classroom-reservation-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="classrooms" type="b2602c69:ProjectViewProjectNode" />
               <item name="classroom-reservation-backend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -306,7 +383,7 @@
               <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="classroom-reservation-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="classrooms" type="b2602c69:ProjectViewProjectNode" />
               <item name="classroom-reservation-backend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -315,35 +392,28 @@
               <item name="Repository" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="classroom-reservation-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="classroom-reservation-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="classrooms" type="462c0819:PsiDirectoryNode" />
-              <item name="Security" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="classroom-reservation-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="classroom-reservation-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="classrooms" type="462c0819:PsiDirectoryNode" />
-              <item name="Service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="classroom-reservation-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="classrooms" type="b2602c69:ProjectViewProjectNode" />
               <item name="classroom-reservation-backend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="classrooms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="classroom-reservation-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="configurations" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -354,13 +424,23 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554475629319" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../classroom-reservation-backoffice" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.sunshines.classrooms.Repository" />
+      <recent name="com.sunshines.classrooms.Controllers" />
+      <recent name="com.sunshines.classrooms.Model" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.sunshines.bookstore.Repository" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.sunshines.classrooms.Model" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -377,40 +457,91 @@
   </component>
   <component name="RunManager">
     <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="BookstoreApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
-      <module name="bookstore" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sunshines.classrooms.ClassroomsApplication" />
       <option name="DEBUG_MODE" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <module name="bookstore" />
+      <envs />
     </configuration>
-    <configuration default="true" type="TestNG">
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
       <properties />
       <listeners />
-      <method v="2">
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.BookstoreApplication" />
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Spring Boot.BookstoreApplication" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -451,186 +582,105 @@
       <workItem from="1548148760914" duration="50000" />
       <workItem from="1554470985679" duration="3616000" />
       <workItem from="1554475804008" duration="463000" />
+      <workItem from="1554540807244" duration="19639000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114866000" />
+    <option name="totallyTimeSpent" value="134505000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="768" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35627836" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3275862" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30603448" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="FindBugs-IDEA" order="7" />
-      <window_info anchor="bottom" id="Spring" order="8" weight="0.32902297" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3275862" />
-      <window_info anchor="bottom" id="CheckStyle" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3275862" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="15" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Docker" order="16" show_stripe_button="false" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="SciView" order="6" />
-      <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" id="Bean Validation" order="10" />
-      <window_info anchor="right" id="Maven" order="11" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="SonarQube" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.05209513" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30577576" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3272933" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36573577" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275862" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Config/Filters.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.3.RELEASE/spring-data-commons-2.1.3.RELEASE.jar!/org/springframework/data/repository/query/QueryByExampleExecutor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Model/Request.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Model/Request/AddToCartRequest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Repository/CartRepository.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Model/Author.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Repository/AuthorRepository.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Model/CartElement.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="2221" column="18" selection-start-line="2221" selection-start-column="18" selection-end-line="2221" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/System.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="352" column="30" selection-start-line="352" selection-start-column="30" selection-end-line="352" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.3.RELEASE/spring-web-5.1.3.RELEASE.jar!/org/springframework/web/multipart/MultipartFile.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Model/Book.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Model/Discount.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.2.RELEASE/spring-security-core-5.1.2.RELEASE.jar!/org/springframework/security/core/userdetails/UserDetailsService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.2.RELEASE/spring-security-core-5.1.2.RELEASE.jar!/org/springframework/security/core/userdetails/UserDetails.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Config/TokenProvider.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Config/Filter/JWTAuthorizationFilter.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Repository/BookRepository.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.13/tomcat-embed-core-9.0.13.jar!/javax/servlet/http/HttpServletResponse.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.2.RELEASE/spring-security-core-5.1.2.RELEASE.jar!/org/springframework/security/core/context/SecurityContextHolder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Security/SecurityConstants.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/ApiSelectorBuilder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/ApiSelectorBuilder.class" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Controllers/BookController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Controllers/FileController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Security/SwaggerConfig.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+          <caret line="17" column="18" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Security/JwtAuthenticationEntryPoint.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Controllers/AuthorController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Controllers/UserController.kt" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Model/Role.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Model/User.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Security/JWTTokenProvider.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/bookstore/Repository/RoleRepository.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.3.RELEASE/spring-beans-5.1.3.RELEASE.jar!/org/springframework/beans/factory/support/DefaultListableBeanFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="920" selection-start-line="920" selection-end-line="920" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Exception/InvalidRequestException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -640,97 +690,285 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Service/StorageService.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding>
-            <element signature="e#42#453#0" expanded="true" />
+            <element signature="e#42#453#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/ClassroomsApplication.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/ClassroomsApplication.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-          <folding>
-            <element signature="e#34#290#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Controllers/UserController.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Model/User.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Repository/RoleRepository.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding>
-            <element signature="e#45#198#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Repository/UserRepository.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-          <folding>
-            <element signature="e#45#197#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Service/UserDetailsSvc.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+        <state relative-caret-position="168">
+          <caret line="14" column="47" lean-forward="false" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Security/SecurityConfig.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+        <state relative-caret-position="42">
+          <caret line="2" column="40" lean-forward="false" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Security/CorsConfig.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="78" column="38" selection-start-line="78" selection-start-column="38" selection-end-line="78" selection-end-column="38" />
+        <state relative-caret-position="273">
+          <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Security/JWTAuthenticationFilter.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="29" column="79" selection-start-line="29" selection-start-column="79" selection-end-line="29" selection-end-column="79" />
+        <state relative-caret-position="336">
+          <caret line="29" column="79" lean-forward="false" selection-start-line="29" selection-start-column="79" selection-end-line="29" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/configurations/hibernate-mysql.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3">
+          <caret line="9" column="62" lean-forward="false" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="31" lean-forward="false" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/javax/annotation/PostConstruct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="79" column="18" lean-forward="false" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Repository/RoleRepository.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="45" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Repository/TypeSalleRepository.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="2" selection-end-line="11" selection-end-column="58" />
+          <folding>
+            <element signature="e#45#266#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Model/Type_Salle.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Controllers/TypeSalleController.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="33" column="17" lean-forward="false" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Repository/UserRepository.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Repository/OrganismeRepository.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="55" lean-forward="false" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/2.1.3.RELEASE/spring-data-jpa-2.1.3.RELEASE.jar!/org/springframework/data/jpa/repository/JpaRepository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.3.RELEASE/spring-web-5.1.3.RELEASE.jar!/org/springframework/http/ResponseEntity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="250" column="30" lean-forward="false" selection-start-line="250" selection-start-column="30" selection-end-line="250" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Model/Type_Organisme.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Repository/TypeOrganismeRepository.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="55" lean-forward="false" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Controllers/TypeOrganismeController.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="63" column="62" lean-forward="false" selection-start-line="63" selection-start-column="62" selection-end-line="63" selection-end-column="62" />
+          <folding>
+            <element signature="e#46#1238#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Model/Organisme.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <folding>
+            <element signature="e#40#113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Repository/SalleRepository.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Model/Salle.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Model/Role.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="210">
+          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding>
+            <element signature="e#40#170#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Repository/ReservationRepository.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="59" lean-forward="false" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/ClassroomsApplication.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.3.RELEASE/spring-beans-5.1.3.RELEASE.jar!/org/springframework/beans/factory/support/DefaultListableBeanFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="962" column="25" lean-forward="false" selection-start-line="962" selection-start-column="25" selection-end-line="962" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Controllers/SalleController.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1029">
+          <caret line="68" column="5" lean-forward="true" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Model/Reservation.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="40" column="14" lean-forward="true" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+          <folding>
+            <element signature="e#40#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Controllers/OrganismeController.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final-sources.jar!/javax/validation/Valid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="33" column="18" lean-forward="false" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Model/User.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Controllers/ReservationController.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="41" column="43" lean-forward="false" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunshines/classrooms/Controllers/UserController.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="144" column="0" lean-forward="false" selection-start-line="144" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
