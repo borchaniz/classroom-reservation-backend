@@ -1,24 +1,13 @@
 package com.sunshines.classrooms.Controllers
 
-import com.sunshines.classrooms.Exception.InvalidRequestException
-import com.sunshines.classrooms.Model.*
-import com.sunshines.classrooms.Repository.*
-import com.sunshines.classrooms.Security.JWTTokenProvider
-import javassist.NotFoundException
+import com.sunshines.classrooms.Exception.NotFoundException
+import com.sunshines.classrooms.Model.Salle
+import com.sunshines.classrooms.Repository.SalleRepository
+import com.sunshines.classrooms.Repository.TypeSalleRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
-import org.springframework.security.access.prepost.PreAuthorize
-import org.springframework.security.authentication.AuthenticationManager
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
-import org.springframework.security.core.context.SecurityContextHolder
-import org.springframework.security.crypto.password.PasswordEncoder
 import org.springframework.web.bind.annotation.*
-import java.util.*
-import java.util.function.Supplier
-
-import javax.annotation.PostConstruct
-import javax.servlet.http.HttpServletResponse
 import javax.validation.Valid
 
 @RestController
@@ -44,17 +33,17 @@ class SalleController {
 
     @PostMapping("")
     fun create(@Valid @RequestBody salle: Salle): Salle {
-            salle.type_salle = typeSalleRepository.findById(salle.type_salle_id!!).orElse(null)
+        salle.type_salle = typeSalleRepository.findById(salle.type_salle_id!!).orElse(null)
 
-            if(salle.type_salle == null)
-                throw NotFoundException("type salle not found")
-            return salleRepository.save(salle)
+        if (salle.type_salle == null)
+            throw NotFoundException("type salle not found")
+        return salleRepository.save(salle)
     }
 
     @PutMapping("/{id}")
     fun update(@PathVariable(value = "id") organisation_id: Int,
-                          @Valid @RequestBody newSalle: Salle): ResponseEntity<Salle> {
-        if(newSalle.type_salle_id != null) {
+               @Valid @RequestBody newSalle: Salle): ResponseEntity<Salle> {
+        if (newSalle.type_salle_id != null) {
             newSalle.type_salle = typeSalleRepository.findById(newSalle.type_salle_id!!).orElse(null)
 
             if (newSalle.type_salle == null)
@@ -62,8 +51,8 @@ class SalleController {
         }
         return salleRepository.findById(organisation_id).map { existingSalle ->
             val updatedSalle: Salle = existingSalle
-                    .copy(number = newSalle.number,capacity=newSalle.capacity
-                            ,has_projector=newSalle.has_projector,type_salle = newSalle.type_salle)
+                    .copy(number = newSalle.number, capacity = newSalle.capacity
+                            , has_projector = newSalle.has_projector, type_salle = newSalle.type_salle)
             ResponseEntity.ok().body(salleRepository.save(updatedSalle))
         }.orElse(ResponseEntity.notFound().build())
     }
@@ -71,7 +60,7 @@ class SalleController {
     @DeleteMapping("/{id}")
     fun delete(@PathVariable(value = "id") organisation_id: Int): ResponseEntity<Void> {
 
-        return salleRepository.findById(organisation_id).map { salle  ->
+        return salleRepository.findById(organisation_id).map { salle ->
             salleRepository.delete(salle)
             ResponseEntity<Void>(HttpStatus.OK)
         }.orElse(ResponseEntity.notFound().build())

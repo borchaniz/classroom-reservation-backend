@@ -1,10 +1,10 @@
 package com.sunshines.classrooms.Controllers
 
 import com.sunshines.classrooms.Exception.InvalidRequestException
+import com.sunshines.classrooms.Exception.NotFoundException
 import com.sunshines.classrooms.Model.*
 import com.sunshines.classrooms.Repository.*
 import com.sunshines.classrooms.Security.JWTTokenProvider
-import javassist.NotFoundException
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
