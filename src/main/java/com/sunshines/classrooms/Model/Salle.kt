@@ -22,7 +22,7 @@ data class Salle (
 
     @ManyToOne
     @JoinColumn(name = "type_salle_id")
-    var type_salle: Type_Salle? = null,
+    var type: Type_Salle? = null,
 
     @Transient
     var type_salle_id : Int ?= null

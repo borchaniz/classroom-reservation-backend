@@ -33,9 +33,9 @@ class SalleController {
 
     @PostMapping("")
     fun create(@Valid @RequestBody salle: Salle): Salle {
-        salle.type_salle = typeSalleRepository.findById(salle.type_salle_id!!).orElse(null)
+        salle.type = typeSalleRepository.findById(salle.type_salle_id!!).orElse(null)
 
-        if (salle.type_salle == null)
+        if (salle.type == null)
             throw NotFoundException("type salle not found")
         return salleRepository.save(salle)
     }
@@ -44,15 +44,15 @@ class SalleController {
     fun update(@PathVariable(value = "id") organisation_id: Int,
                @Valid @RequestBody newSalle: Salle): ResponseEntity<Salle> {
         if (newSalle.type_salle_id != null) {
-            newSalle.type_salle = typeSalleRepository.findById(newSalle.type_salle_id!!).orElse(null)
+            newSalle.type = typeSalleRepository.findById(newSalle.type_salle_id!!).orElse(null)
 
-            if (newSalle.type_salle == null)
+            if (newSalle.type == null)
                 throw NotFoundException("type salle not found")
         }
         return salleRepository.findById(organisation_id).map { existingSalle ->
             val updatedSalle: Salle = existingSalle
                     .copy(number = newSalle.number, capacity = newSalle.capacity
-                            , has_projector = newSalle.has_projector, type_salle = newSalle.type_salle)
+                            , has_projector = newSalle.has_projector, type = newSalle.type)
             ResponseEntity.ok().body(salleRepository.save(updatedSalle))
         }.orElse(ResponseEntity.notFound().build())
     }

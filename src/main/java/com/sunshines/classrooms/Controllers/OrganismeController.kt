@@ -48,7 +48,7 @@ class OrganismeController {
 
     @PostMapping("")
     fun create(@Valid @RequestBody organisme: Organisme): Organisme {
-            organisme.type = typeOrganismeRepository.findById(organisme.type_id!!).orElse(null)
+            organisme.type = typeOrganismeRepository.findById(organisme.type_organisme_id!!).orElse(null)
 
             if(organisme.type == null)
                 throw NotFoundException("type organisme not found")
@@ -58,8 +58,8 @@ class OrganismeController {
     @PutMapping("/{id}")
     fun update(@PathVariable(value = "id") organisation_id: Int,
                           @Valid @RequestBody newOrganisme: Organisme): ResponseEntity<Organisme> {
-        if(newOrganisme.type_id != null) {
-            newOrganisme.type = typeOrganismeRepository.findById(newOrganisme.type_id!!).orElse(null)
+        if(newOrganisme.type_organisme_id != null) {
+            newOrganisme.type = typeOrganismeRepository.findById(newOrganisme.type_organisme_id!!).orElse(null)
 
             if (newOrganisme.type == null)
                 throw NotFoundException("type organisme not found")

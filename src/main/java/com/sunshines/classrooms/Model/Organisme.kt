@@ -21,7 +21,7 @@ data class Organisme (
     var type: Type_Organisme? = null,
 
     @Transient
-    var type_id : Int ? = null
+    var type_organisme_id : Int ? = null
 ){
     val isValid: Boolean
         get() = !(this.label ==null)
