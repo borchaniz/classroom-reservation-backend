@@ -32,6 +32,9 @@ class ReservationController {
     lateinit var salleRepository: SalleRepository
 
     @Autowired
+    lateinit var organismeRepository: OrganismeRepository
+
+    @Autowired
     lateinit var userRepository: UserRepository
 
     @GetMapping("")
@@ -57,6 +60,11 @@ class ReservationController {
 
         if(reservation.user == null)
             throw NotFoundException("user not found")
+
+        reservation.organisme = organismeRepository.findById(reservation.organisme_id!!).orElse(null)
+
+        if(reservation.organisme == null)
+            throw NotFoundException("organisme not found")
 
 
         return reservationRepository.save(reservation)
