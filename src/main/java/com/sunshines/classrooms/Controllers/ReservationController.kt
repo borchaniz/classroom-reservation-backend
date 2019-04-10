@@ -89,7 +89,7 @@ class ReservationController {
         }.orElse(ResponseEntity.notFound().build())
     }
 
-    @PutMapping("/accepter/{id}")
+    @PutMapping("/accept/{id}")
     fun accepter(@PathVariable(value = "id") reservation_id: Int): ResponseEntity<Reservation> {
         return reservationRepository.findById(reservation_id).map { existingReservation->
             val updatedReservation: Reservation = existingReservation
@@ -98,7 +98,7 @@ class ReservationController {
         }.orElse(ResponseEntity.notFound().build())
     }
 
-    @PutMapping("/refuser/{id}")
+    @PutMapping("/refuse/{id}")
     fun refuser(@PathVariable(value = "id") reservation_id: Int): ResponseEntity<Reservation> {
         return reservationRepository.findById(reservation_id).map { existingReservation->
             val updatedReservation: Reservation = existingReservation
