@@ -22,7 +22,7 @@ import javax.validation.Valid
 
 @RestController
 @RequestMapping("/user")
-class   UserController {
+class UserController {
 
     @Autowired
     lateinit var roleRepository: RoleRepository
@@ -45,14 +45,6 @@ class   UserController {
             val admin = Role()
             admin.name = "ADMIN"
             roleRepository.save(admin)
-
-            val student = Role()
-            student.name = "STUDENT"
-            roleRepository.save(student)
-
-            val teacher = Role()
-            teacher.name = "TEACHER"
-            roleRepository.save(teacher)
 
             val user = Role()
             user.name = "USER"
@@ -78,7 +70,7 @@ class   UserController {
         }
     }
 
-    @PostMapping("/registerStudent")
+    @PostMapping("/register")
     @ResponseStatus(HttpStatus.OK)
     fun registerStudent(@Valid @RequestBody user: User): User {
         if (!user.isValid) {
@@ -86,29 +78,14 @@ class   UserController {
         }
         if (userRepository.findAllByEmail(user.email!!).isNotEmpty())
             throw InvalidRequestException("Email already exists")
-        user.role = roleRepository.findFirstByName("STUDENT")
-        //        user.setPassword(passwordEncoder.encode(user.getPassword()));
-        userRepository.save(user)
-        return user
-    }
-
-    @PostMapping("/registerTeacher")
-    @ResponseStatus(HttpStatus.OK)
-    fun registerTeacher(@Valid @RequestBody user: User): User {
-        if (!user.isValid) {
-            throw InvalidRequestException("Invalid User Request")
-        }
-        if (userRepository.findAllByEmail(user.email!!).isNotEmpty())
-            throw InvalidRequestException("Email already exists")
-        user.role = roleRepository.findFirstByName("TEACHER")
-        //        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.role = roleRepository.findFirstByName("USER")
+        user.setPassword(passwordEncoder.encode(user.password))
         userRepository.save(user)
         return user
     }
 
     @PostMapping("/signin")
     fun authenticateUser(@RequestBody user: User, response: HttpServletResponse) {
-
         val authentication = authenticationManager.authenticate(
                 UsernamePasswordAuthenticationToken(
                         user.email,
@@ -121,6 +98,7 @@ class   UserController {
         response.addHeader("Authorization", "Bearer $jwt")
         return
     }
+
     @PutMapping("/validateUser/{id}")
     fun validateUser(@PathVariable(value = "id") user_id: Int): ResponseEntity<User> {
 
@@ -143,18 +121,8 @@ class   UserController {
 
     @GetMapping("")
 //    @PreAuthorize("hasAuthority('ADMIN')")
-    fun getAllUsers() : ResponseEntity<List<User> >{
-        return ResponseEntity.ok().body(userRepository.findAll().filter{ user -> user.role!!.name!="ADMIN"})
-    }
-
-    @GetMapping("/allStudents")
-    fun getAllStudents() : ResponseEntity<List<User> >{
-        return ResponseEntity.ok().body(userRepository.findAll().filter{ user -> user.role!!.name=="STUDENT"})
-    }
-
-    @GetMapping("/allTeachers")
-    fun getAllTeachers() : ResponseEntity<List<User> >{
-        return ResponseEntity.ok().body(userRepository.findAll().filter{ user -> user.role!!.name=="TEACHER"})
+    fun getAllUsers(): ResponseEntity<List<User>> {
+        return ResponseEntity.ok().body(userRepository.findAll().filter { user -> user.role!!.name != "ADMIN" })
     }
 
 
