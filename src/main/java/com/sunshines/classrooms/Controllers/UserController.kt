@@ -108,6 +108,14 @@ class UserController {
         }.orElse(ResponseEntity.notFound().build())
     }
 
+    @DeleteMapping("/{id}")
+    fun deleteUser(@PathVariable(value = "id") user_id: Int): User {
+        val user = userRepository.findById(user_id)
+        userRepository.delete(user.get())
+        return user.get()
+
+    }
+
     @PutMapping("/unValidateUser/{id}")
     fun unValidateUser(@PathVariable(value = "id") user_id: Int): ResponseEntity<User> {
 
@@ -140,7 +148,7 @@ class UserController {
     @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping("/unvalidated")
     fun unvalidatedUsers(): List<User> {
-        return userRepository.findAllByStatus(0).filter { it.role?.name.orEmpty()!="ADMIN"}
+        return userRepository.findAllByStatus(0).filter { it.role?.name.orEmpty() != "ADMIN" }
     }
 
 }

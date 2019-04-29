@@ -7,6 +7,5 @@ import java.util.*
 
 @Repository
 interface ReservationRepository : JpaRepository<Reservation, Int> {
-//    override fun findAll(): List<Type_Salle>
-//    override fun findById(p0: Int): Optional<Type_Salle>
+    fun findByUser(user:User):List<Reservation>
 }
