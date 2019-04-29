@@ -134,7 +134,14 @@ class UserController {
 
     @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping("/authenticatedAdmin")
-    fun authenticatedAdmin(): Any {
+    fun authenticatedAdmin(): User {
         return userRepository.findFirstByEmail((SecurityContextHolder.getContext().authentication.principal as User).email!!)
     }
+
+    @PreAuthorize("hasAuthority('ADMIN')")
+    @GetMapping("/unvalidated")
+    fun unvalidatedUsers(): List<User> {
+        return userRepository.findAllByStatus(0).filter { it.role?.name.orEmpty()!="ADMIN"}
+    }
+
 }

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository
 interface UserRepository : JpaRepository<User, Int> {
     override fun findAll(): List<User>
     fun findAllByEmail(email: String): List<User>
-
     fun findFirstByEmail(email: String): User
     fun findFirstById(id: Int): User
+    fun findAllByStatus(status:Int):List<User>
 }
