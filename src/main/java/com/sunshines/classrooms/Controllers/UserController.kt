@@ -99,9 +99,8 @@ class UserController {
         return
     }
 
-    @PutMapping("/validateUser/{id}")
+    @PutMapping("/validate/{id}")
     fun validateUser(@PathVariable(value = "id") user_id: Int): ResponseEntity<User> {
-
         return userRepository.findById(user_id).map { existingUser ->
             val validatedUser: User = existingUser
                     .copy(status = 1)
