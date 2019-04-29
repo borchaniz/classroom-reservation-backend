@@ -25,7 +25,10 @@ data class Salle (
     var type: Type_Salle? = null,
 
     @Transient
-    var type_salle_id : Int ?= null
+    var type_salle_id : Int ?= null,
+
+    @Transient
+    var reservations: MutableList<Reservation> = mutableListOf()
 )
 
 {

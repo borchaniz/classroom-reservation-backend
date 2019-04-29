@@ -1,7 +1,9 @@
 package com.sunshines.classrooms.Controllers
 
 import com.sunshines.classrooms.Exception.NotFoundException
+import com.sunshines.classrooms.Model.Reservation
 import com.sunshines.classrooms.Model.Salle
+import com.sunshines.classrooms.Repository.ReservationRepository
 import com.sunshines.classrooms.Repository.SalleRepository
 import com.sunshines.classrooms.Repository.TypeSalleRepository
 import org.springframework.beans.factory.annotation.Autowired
@@ -19,10 +21,24 @@ class SalleController {
     @Autowired
     lateinit var typeSalleRepository: TypeSalleRepository
 
+    @Autowired
+    lateinit var reservationRepository: ReservationRepository
+
 
     @GetMapping("")
-    fun getAll(): List<Salle> =
-            salleRepository.findAll()
+    fun getAll(): List<Salle> {
+        val salles = salleRepository.findAll()
+        for (salle in salles) {
+            val reservations = reservationRepository.findBySalle(salle).filter {
+                it.status == 1 || it.status == 3
+            }
+            for (reservation in reservations) {
+                salle.reservations.add(Reservation(reservation.id, reservation.start_date, reservation.end_date))
+            }
+        }
+        return salles
+
+    }
 
     @GetMapping("/{id}")
     fun getById(@PathVariable(value = "id") salle_id: Int): ResponseEntity<Salle> {

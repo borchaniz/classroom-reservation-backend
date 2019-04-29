@@ -8,4 +8,5 @@ import java.util.*
 @Repository
 interface ReservationRepository : JpaRepository<Reservation, Int> {
     fun findByUser(user:User):List<Reservation>
+    fun findBySalle(salle:Salle):List<Reservation>
 }
